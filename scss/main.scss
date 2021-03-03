@@ -1,0 +1,871 @@
+
+img{
+    user-select: none;
+    pointer-events: none;
+}
+
+a{
+    text-decoration: none;
+    color: #777;
+}
+a:hover{
+    color: #333;
+    text-decoration: #333 underline; 
+}
+
+div#wrap{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto 0 auto;
+    padding: 0 0px 0 0;
+    border: 1px solid #333;
+    border-width: 0 1px 0 1px;
+    main{
+        min-height: calc(100vh - 76px);
+    }
+    form{
+        // 検索欄
+        input[type="text"]{
+            padding: 0 600px 3px 0;
+            margin: 0 0 0 104px;
+            font-size: 1rem;
+        }
+        input[type="submit"]{
+            padding: 5px;
+            margin: 0 0 0 50px;
+        }
+        // 投稿ファイル選択
+        input[type="file"]{
+            padding: 0 0px 0 0;
+            margin: 0 300px 0 0px;
+        }
+    }
+
+    // プロフ画像の表示
+    div.post_img{
+        border: solid 1px #555;
+        width: 800px;
+        padding: 0 0 20px 0;
+        margin: 30px auto 0 auto;
+
+        div.prf_img{
+            width: 50px;
+            height: 50px;
+            margin: 10px auto 10px 50px;
+            border: #555 1px solid;
+            a{
+                display: flex;
+                width: 700px;
+                align-items: center;
+                object-fit: contain;
+                img{
+                    width: 50px;
+                    height: 50px;
+                    vertical-align: middle;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                span{
+                    display: inline-block;
+                    left: 100px;
+                    top: 20px;
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+
+        // 投稿した画像の表示
+        div.img{
+            position: relative;
+            margin: 0 0 0 50px;
+            a{
+                text-decoration: none;
+                color: #777;
+            }
+            div.img_pic{
+                width: 700px;
+                height: 500px;
+                border: 1px solid #777;
+                img{
+                    width: 700px;
+                    height: 500px;
+                    object-fit: cover;
+                }
+            }
+            .com{
+                line-height: 2rem;
+                margin: 10px 0 0 50px;
+                p{
+                    display: inline-block;
+                    width: 600px;
+                    padding-top: 10px;
+                    margin-top: 10px;
+                    border-top: 1px solid #ddd;
+                    &:first-child{
+                        border: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            .discri{
+                display: inline-block;
+                width: 700px;
+                margin-top: 10px;
+                line-height: 1.6rem;
+                font-size: 1.3rem;
+            }
+            .post_created{
+                font-size: .8rem;
+                line-height: .6rem;
+            }
+            .pic_com{
+                left: 0px;
+            }
+            // 画像編集
+            a.pic_edi{  
+                display: block;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: 550px;
+                top: -60px;
+            }
+            div.pic_edi{
+                width: 50px;
+                height: 50px;
+                background-image: url(../images/icon/edit.png);
+                background-size: cover;
+            }
+            // ダウンロードリンク
+            a.pic_dow{
+                display: block;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: 650px;
+                top: -55px;
+            }
+            div.pic_dow{
+                width: 40px;
+                height: 40px;
+                background-image: url(../images/icon/downroad02.png);
+                background-size: cover;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                vertical-align: top;
+                text-shadow: 
+                 1px  1px 0px #ddd,
+                -1px  1px 0px #ddd,
+                 1px -1px 0px #ddd,
+                -1px -1px 0px #ddd,
+                 1px  0px 0px #ddd,
+                 0px  1px 0px #ddd,
+                -1px  0px 0px #ddd,
+                 0px -1px 0px #ddd;;
+                
+            }
+            .form_comment{
+                margin: 20px 0 0 0;
+                .post_comment{
+                    margin: 0px 0 0 0;
+                    padding: 0 400px 0 0;
+                }
+            }
+        }
+
+    }
+
+    // 投稿詳細の表示
+    div.detail_img{
+        border: none;
+        margin: 0 auto 0 auto;
+        div.img{
+            div.img_pic{
+                width: 700px;
+                height: auto;
+                border: none;
+                object-fit: contain;
+                img{
+                    height: auto;
+                }
+                span{
+                    display: inline-block;
+                    left: 100px;
+                    top: 20px;
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+    }
+
+    // フィルターの選択
+    div#select_filter{
+        position: relative;
+        height: 200px;
+        margin: 30px 0 0 750px;
+        span{
+            left: -90px;
+            top: 5%;
+        }
+        .discri{
+            left: -600px;
+            top: -20px;
+        }
+        textarea{
+            resize: none;
+            font-size: 1.3rem;
+            left: -600px;
+        }
+    }
+
+
+    // DMのアイコン
+    div#send_dm{
+        position: fixed;
+        display: inline-block;
+        right: 30px;
+        bottom: 30px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 15px;
+        background-color: aquamarine;
+        background-image: url(../images/icon/dm.png);
+        background-size: cover;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 2rem;
+        margin-left: 100px;
+    }
+}
+main.edit{
+    .post_remove{
+        position: relative;
+        left: 800px;
+        bottom: 100px;
+        color: rgb(0, 179, 185);
+        text-decoration: underline;
+    }
+}
+
+// プロフィール
+main#plofile{
+    position: relative;
+    // プロフ
+    div.prf_img{
+        width: 100px;
+        height: 100px;
+        margin: 10px auto 10px 100px;
+        border: #555 1px solid;
+        display: flex;
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        span{
+            width: 800px;
+            height: 2rem;
+            margin: 10px 0 0 10px;
+            font-size: 1.3rem;
+        }
+
+    }
+    // 編集ボタン
+    div.plo_edi{
+        right: 100px;
+        top: 100px;
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/icon/haguruma.png);
+        background-size: contain;
+    }
+    div.fol{
+        right: 100px;
+        top: 100px;
+        width: 100px;
+        padding: 25px 0;
+        line-height: 0;
+        text-align: center;
+        border: 1px solid #555;
+        border-radius: 10px;
+        user-select: none;
+        background-color: rgb(166, 252, 255);
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(166, 252, 255, .5);
+        }
+    }
+    div.e_fol{
+        right: 100px;
+        top: 100px;
+        width: 100px;
+        padding: 25px 0;
+        line-height: 0;
+        text-align: center;
+        border: 1px solid #555;
+        border-radius: 10px;
+        user-select: none;
+        cursor: pointer;
+        background-color: rgba(5, 5, 5, .1);
+        &:hover{
+            background-color: rgba(5, 5, 5, .3);
+        }
+    }
+
+    div.contain{
+        text-align: center;
+        div{
+            margin-top: 10px;
+            div{
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    a#post_ri{
+        display: block;
+        width: 200px;
+        margin: 20px 20px 0 auto;
+    }
+        
+}
+
+// プロフィール編集 
+main#pro_chg{
+    form{
+        margin-top: 100px;
+        dd{
+            position: relative;
+            display: block;
+            width: 500px;
+            margin: 30px auto 0 auto;
+            label{
+                display: inline-block;
+                width: 200px;   
+            }
+            input[type="text"]{
+                margin: 0 0 0 0;
+                padding: 0 0 3px 0;
+            }
+            input[type="submit"]{
+                margin: 0 0 0 500px;
+            }
+            input[type="file"]{
+                padding: 0;
+                margin: 0;
+            }
+            a:first-child{
+                top: 50%;
+                left: 50%;
+            }
+            a:nth-child(2){
+                top: 50%;
+                left: 10%;
+                color: rgb(240, 97, 97);
+                font-weight: bold;
+                &:hover{
+                    text-decoration: rgb(240, 97, 97) underline;
+                }
+            }
+        }
+        .prf_error{
+
+            margin-left: 355px;
+        }
+    }
+}
+
+// help
+main#help{
+    ul{
+        margin-left: 200px;
+        line-height: 2rem;
+    }
+}
+
+main#remove{
+    p{
+        margin: 100px 0 0 0;
+        text-align: center;
+        color: rgb(240, 97, 97);
+        line-height: 2rem;
+    }
+    button:nth-child(2){
+        color: rgb(240, 97, 97);
+    }
+}
+
+// follow
+main#follow{
+    div.select{
+        justify-content: space-evenly;
+        a{
+            display: inline-block;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            color: #555;
+            justify-content: flex-start;
+            border-radius: 10px;
+        }
+        a:hover{
+            border: #555;
+        }
+    }
+    div.prf_img{
+        width: 80px;
+        height: 80px;
+        margin: 20px auto 10px 100px;
+        border: #555 1px solid;
+        display: flex;
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        span{
+            width: 800px;
+            height: 2rem;
+            margin: 10px 0 0 10px;
+            font-size: 1.3rem;
+        }
+    }
+    a.prf{
+        color: #333;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+// notice
+main#notice{
+    div.prf_img{
+        width: 80px;
+        height: 80px;
+        margin: 20px auto 10px 100px;
+        border: #555 1px solid;
+        display: flex;
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        div.flex{
+            position: relative;
+            span,
+            span a{
+                width: 800px;
+                height: 2rem;
+                margin: 10px 0 0 10px;
+                font-size: 1.3rem;
+            }
+            div.timeStamp{
+                bottom: 10px;
+                right: 30px;
+            }
+        }
+    }
+    a.prf{
+        color: #333;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+main#dm{
+    div.prf_img{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 20px auto 10px 100px;
+        border: #555 1px solid;
+        display: flex;
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        span,
+        span a{
+            width: 800px;
+            height: 2rem;
+            margin: 30px 0 0 10px;
+            font-size: 1.3rem;
+        }
+        .dm_count{
+            left: 700px;
+            top: 10px;
+            width: 60px;
+            padding: 30px 0px;
+            text-align: center;
+            line-height: 0;
+            background-color: rgb(229, 247, 187);
+            border-radius: 50%;
+        }
+    }
+    a.prf{
+        color: #333;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+// dm
+main#message{
+    a{
+        margin: 0 0 0 20px;
+    }
+    div.prf_img{
+        top: 100px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        margin: -40px auto 20px 100px;
+        border: #555 1px solid;
+        display: flex;
+        img{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        span,
+        span a{
+            width: 800px;
+            height: 2rem;
+            margin: 20px 0 0 0px;
+            font-size: 1.3rem;
+        }
+    }
+    div.flex{
+        flex-direction: column;
+        width: 800px;
+        margin-left: 100px;
+        .you_mes{
+            padding: 20px;
+            margin: 10px;
+            font-size: 1.6rem;
+            background-color: #ddd;
+            border-radius: 20px;
+        }
+        .my_mes{
+            padding: 20px;
+            margin: 10px;
+            font-size: 1.6rem;
+            text-align: right;
+            background-color: rgb(229, 247, 187);
+            border: 1px #777 solid;
+            border-radius: 20px;
+        }
+    }
+    input{
+        margin-left: 100px;
+    }
+    button{
+        margin: 0;
+        padding: 20px;
+        border-radius: 50%;
+    }
+}
+
+.serch{
+    div.prf_img{
+        top: 100px;
+        left: 100px;
+        width: 80px;
+        height: 80px;
+        margin: 20px auto 10px 100px;
+        border: #555 1px solid;
+        display: flex;
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        span,
+        span a{
+            width: 800px;
+            height: 2rem;
+            margin: 10px 0 0 10px;
+            font-size: 1.3rem;
+        }
+    }
+    a.prf{
+        color: #333;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+
+div#h_100{
+    height: 100px;
+}
+.cir{
+    border-radius: 50%;
+}
+button{
+    padding: 5px;
+    margin: 0 0 0 10px;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pos_ab{
+    position: absolute;
+}
+.bor{
+    width: 800px;
+    height: 1px;
+    margin: 20px auto 0 auto;
+    background-color: #777
+}
+.gg_box{
+    display: grid;
+    width: 800px;
+    margin: 10px auto 0 auto;
+    grid-template-columns: repeat(3,minmax(220px,1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 8px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+}
+.selecter{
+    margin: 100px 0 0 0;
+}
+.error{
+    color: #d88;
+    margin: 10px auto 20px 100px;
+}
+.hidden_text{
+    text-indent: 100%; 
+    white-space:nowrap; 
+    overflow:hidden; 
+    margin: 10px auto 20px 500px;
+}
+// input_text
+.inputBox{
+    position: relative;
+    width: 800px;
+    margin: 0 auto 0 0px;
+}
+input[type="text"],
+input[type="password"]{
+    border: none;
+    border-bottom: #aaa solid 1px;
+    padding-bottom: 3px;
+    transition: .3s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border-bottom: #111 solid 1px;
+    outline: none;
+}
+.lab_ani{
+    position: absolute;
+    top: -2px;
+    transition: .3s;
+    color: #aaa;
+    left: 100px;
+}
+input[type="text"]:focus ~.lab_ani{
+    position: absolute;
+    top: -12px;
+    font-size: .8rem;
+    color: #555;
+}
+
+button.btn-flat-border,
+input[type="submit"],
+input[type="file"],
+input[type="button"],
+input[type="file" i]::-webkit-file-upload-button,
+.btn-flat-border {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #a9a0ff;
+    border: solid 2px #7d6eff;
+    border-radius: 3px;
+    transition: background-color .4s;
+    &:hover {
+    background: #7d6eff;
+    color: white;
+  }
+}
+
+// igm_edit
+.sepia{
+    filter: sepia(1);
+}
+.brightness{
+    filter: brightness(2);
+}
+.contrast{
+    filter: contrast(2);
+}
+.blur{
+    filter: blur(3px);
+}
+.grayscale{
+    filter: grayscale(1);
+}
+.hue-rotate{
+    filter: hue-rotate(180deg);
+}
+.invert{
+    filter: invert(1);
+}
+
+// menu
+.menu {
+    max-width: 100%;
+    
+    label {
+        display: block;
+        margin: 0 0 4px 0;
+        padding : 15px;
+        line-height: 1;
+        // background-color: #eee;
+        border: 1px solid #ddd;
+        cursor :pointer;
+    }
+    
+    input {
+        display: none;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        background :#f4f4f4;
+        list-style: none;
+        li {
+            height: 0;
+            overflow: hidden;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+    }
+}
+
+
+
+#menu_bar01:checked ~ #links01 li,
+#menu_bar02:checked ~ #links02 li {
+    height: 54px;
+    opacity: 1;
+}
+
+// loader
+.loader {
+    color: #777;
+    font-size: 90px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  }
+  @-webkit-keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @-webkit-keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+@import "header";
+
+@import "footer";

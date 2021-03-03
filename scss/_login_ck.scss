@@ -1,0 +1,35 @@
+@import "login";
+
+#vis{
+    border-radius: 50%;
+    background-position: center;
+    img{
+        width: 15vh;
+        border-radius: 50%;
+        background-position: center ;
+    }
+}
+div#formBox{
+    margin: 80px 0 0 350px;
+    position: relative;
+    img{
+        margin: 0 0 0 0;
+    }
+    p{
+        position: absolute;
+        top:  10%;
+        left: 20%;
+    }
+    p:nth-child(2){
+        top: 35%;
+    }
+    input[type="submit"]{
+        margin: 100px 0 0 100px;
+    }
+}
+
+a{
+    display: inline-block;
+    margin: 0 auto 0 100px;
+    background-color: aqua;
+}

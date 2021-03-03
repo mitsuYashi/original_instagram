@@ -1,0 +1,70 @@
+div#wrapper{
+    width: 500px;
+    margin: 50px 100px 0 auto;
+}
+div#wrap{
+    // position: absolute;
+    width: 500px;
+    height: 600px;
+    
+    border: 1px solid #ccc;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // -webkit-transform: translate(-50%, -50%);
+    // -ms-transform: translate(-50%, -50%);
+}
+h1{
+    font-size: 300%;
+    margin: 20px;
+}
+div#formBox{
+    margin: 0px 0 0 0;
+}
+dd{
+    margin: 0 auto 20px 175px;
+    position: relative;
+}
+label{
+    position: absolute;
+    left: -45%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+}
+input{
+    vertical-align:middle; 
+}
+input[type="submit"]{
+}
+.box{
+    margin: 0 0 20px 0;
+    a{
+        margin: 0 auto 20px 350px;
+    }
+}
+.qMark{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 180%;
+}
+
+.error{
+    color: #d88;
+    margin: 10px auto 20px 100px;
+}
+p#not_pass{
+}
+.hidden_text{
+    text-indent: 100%; 
+    white-space:nowrap; 
+    overflow:hidden; 
+    margin: 10px auto 20px 500px;
+}

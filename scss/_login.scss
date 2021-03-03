@@ -1,0 +1,63 @@
+div#wrapper{
+    width: 500px;
+    margin: 50px 100px 0 auto;
+}
+div#wrap{
+    // position: absolute;
+    width: 500px;
+    height: 600px;
+    
+    border: 1px solid #ccc;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // -webkit-transform: translate(-50%, -50%);
+    // -ms-transform: translate(-50%, -50%);
+}
+h1{
+    font-size: 300%;
+    margin: 20px;
+}
+div#formBox{
+    margin: 100px 0 0 0;
+    dd{
+        margin: 0 auto 10px 125px;
+        position: relative;
+    }
+    input{
+        padding: 10px;
+    }
+    input[type="submit"]{
+    }
+    .box{
+        margin: 0 0 20px 0;
+        a{
+            margin: 0 auto 20px 350px;
+        }
+    }
+    .qMark{
+        position: absolute;
+        top: 5px;
+        left: -10%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ddd;
+        text-align: center;
+        line-height: 180%;
+        user-select: none;
+        &:hover div{
+            display: block;
+        }
+        div{
+            position: absolute;
+            top: 0%;
+            right: -660%;
+            display: none;
+            width: 200px;
+            height: 2em;
+            border-radius: 5%;
+            background-color: rgb(239, 240, 170);
+        }
+    }
+}
