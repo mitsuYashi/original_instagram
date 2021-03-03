@@ -382,10 +382,7 @@ main#pro_chg{
 
 // help
 main#help{
-    ul{
-        margin-left: 200px;
-        line-height: 2rem;
-    }
+    
 }
 
 main#remove{
@@ -775,14 +772,14 @@ input[type="file" i]::-webkit-file-upload-button,
         }
     }
 }
-
-
-
 #menu_bar01:checked ~ #links01 li,
 #menu_bar02:checked ~ #links02 li {
     height: 54px;
+    padding: 10px 0 0 50px;
     opacity: 1;
 }
+
+
 
 // loader
 .loader {

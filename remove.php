@@ -15,7 +15,7 @@ session_start();
 </head>
 <body>
 
-    <?php include('include/header.html'); ?>
+    <?php include('include/header.php'); ?>
     <div id="wrap">
 
         <main id="remove">
@@ -27,7 +27,7 @@ session_start();
             </p>
 
             <div class="flex selecter">
-                <a href="plofile_chg.php"><button>いいえ</button></a>
+                <a href="profile_chg.php"><button>いいえ</button></a>
                 <a href="join/login.php"><button>はい</button></a>
             </div>
             
