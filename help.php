@@ -22,7 +22,6 @@ session_start();
 
             <div id="h_100"></div>
 
-            <!-- hoverもしくはクリックアクションを追加予定 -->
             <h1>help</h2>
             <div class="menu">
                 <label for="menu_bar01">投稿について</label>
