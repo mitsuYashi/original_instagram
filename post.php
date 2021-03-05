@@ -15,7 +15,7 @@ if (!empty($_FILES)) {
 
     if (!empty($filename)) {
         $ext = substr($filename, -3);
-        if ($ext != 'jpg' && $ext != 'png' && $ext != 'gif' && $ext != 'mp4' && $ext != 'ebp') {
+        if ($ext != 'jpg' && $ext != 'png' && $ext != 'gif' && $ext != 'ebp') {
             $error['img'] = 'type';
         }
     }
