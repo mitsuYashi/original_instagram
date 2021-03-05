@@ -28,7 +28,7 @@ session_start();
 
             <div class="flex selecter">
                 <a href="profile_chg.php"><button class="btn-flat-border">いいえ</button></a>
-                <a href="join/login.php"><button class="btn-flat-border-red">はい</button></a>
+                <a href="./api/auth/member_remove.php"><button class="btn-flat-border-red">はい</button></a>
             </div>
             
         </main>
