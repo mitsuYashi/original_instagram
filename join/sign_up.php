@@ -50,6 +50,8 @@ if (empty($error)) {
     <link rel="stylesheet" role="text/css" href="../css/join.css">
 </head>
 <body id="sign_up">
+
+    <h1 id="PICTshadow">PICTshadow</h1>
     
     <div id="wrapper">
         <div id="wrap">

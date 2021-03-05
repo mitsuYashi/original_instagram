@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>PICTshadow</title>
     <link rel="stylesheet" role="text/css" href="css/reset.css">
     <link rel="stylesheet" role="text/css" href="css/main.css">
 
@@ -27,8 +27,8 @@ session_start();
             </p>
 
             <div class="flex selecter">
-                <a href="profile_chg.php"><button>いいえ</button></a>
-                <a href="join/login.php"><button>はい</button></a>
+                <a href="profile_chg.php"><button class="btn-flat-border">いいえ</button></a>
+                <a href="join/login.php"><button class="btn-flat-border-red">はい</button></a>
             </div>
             
         </main>

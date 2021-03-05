@@ -4,6 +4,10 @@ require('./resource/db_connect.php');
 require('./resource/functions.php');
 
 session_start();
+if (empty($_SESSION)){
+    header('Location: join/login.php');
+    exit();
+}
 
 $error['img'] = '';
 $error['user_id'] = '';
@@ -104,7 +108,7 @@ if (!empty($_POST) || !empty($_FILES)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>PICTshadow</title>
     <link rel="stylesheet" role="text/css" href="css/reset.css">
     <link rel="stylesheet" role="text/css" href="css/main.css">
 

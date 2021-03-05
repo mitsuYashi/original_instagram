@@ -38,7 +38,7 @@ $cnt = $stmt3->fetch();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>PICTshadow</title>
     <link rel="stylesheet" role="text/css" href="css/reset.css">
     <link rel="stylesheet" role="text/css" href="css/main.css">
 

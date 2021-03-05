@@ -57,6 +57,8 @@ if (!empty($_POST)){
 </head>
 <body id="sign_up_ck">
     
+    <h1 id="PICTshadow">PICTshadow</h1>
+
     <div id="wrapper">
         <div id="wrap">
             <h1>会員登録</h1>

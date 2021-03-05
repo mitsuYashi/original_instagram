@@ -10,7 +10,7 @@ $header_user = $header_stmt->fetch();
 <header>
     <div id="stick">
         <nav>
-            <h1><a href="index.php">INSTAtata</a></h1>
+            <h1><a href="index.php">PICTshadow</a></h1>
             <ul>
                 <li><a href="index.php"><img src="images/icon/home.png"></a></li>
                 <li><a href="post.php"><img src="images/icon/post.png"></a></li>

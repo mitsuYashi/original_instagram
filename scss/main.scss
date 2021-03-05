@@ -382,7 +382,9 @@ main#pro_chg{
 
 // help
 main#help{
-    
+    h1{
+        margin: 15px auto 25px 50px;
+    }
 }
 
 main#remove{
@@ -712,6 +714,21 @@ input[type="file" i]::-webkit-file-upload-button,
     transition: background-color .4s;
     &:hover {
     background: #7d6eff;
+    color: white;
+  }
+}
+
+.btn-flat-border-red {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #ff84a9;
+    border: solid 2px #ff48c2;
+    border-radius: 3px;
+    transition: background-color .4s;
+    &:hover {
+    background: #ff48c2;
     color: white;
   }
 }

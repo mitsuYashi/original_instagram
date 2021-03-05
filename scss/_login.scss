@@ -3,20 +3,14 @@ div#wrapper{
     margin: 50px 100px 0 auto;
 }
 div#wrap{
-    // position: absolute;
     width: 500px;
     height: 600px;
     
     border: 1px solid #ccc;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // -webkit-transform: translate(-50%, -50%);
-    // -ms-transform: translate(-50%, -50%);
-}
-h1{
-    font-size: 300%;
-    margin: 20px;
+    h1{
+        font-size: 300%;
+        margin: 20px;
+    }
 }
 div#formBox{
     margin: 100px 0 0 0;

@@ -30,6 +30,8 @@ $member = $login->fetch();
 </head>
 <body id="login_ck">
     
+    <h1 id="PICTshadow">PICTshadow</h1>
+
     <div id="wrapper">
         <div id="wrap">
             <h1>ログイン</h1>
