@@ -65,7 +65,7 @@ if (!empty($_POST)) {
             } ?>
                 <form action="" method="POST">
                     <dd class="inputBox">
-                        <input type="text" size="35" name="user_id" id="user_id" class="enable_ck">
+                        <input type="text" size="35" name="user_id" id="user_id" class="enable_ck" autofocus>
                         <label class="lab_ani">ユーザーID</label>
                     </dd>
                     <dd class="inputBox">

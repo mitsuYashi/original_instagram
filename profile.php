@@ -78,9 +78,9 @@ if (empty($user)) {
             <a href="profile_chg.php"><div class="plo_edi cir pos_ab"></div></a>
 
             <?php } elseif ($e_follow['cnt'] > 0) { // フォローしているか検証 ?>
-                <a href="./api/auth/follow.php?id=<?php echo $user['id'] ?>"><div class="e_fol pos_ab" id="follow">フォロー済</div></a>
+                <a href="./api/auth/follow.php?id=<?php echo $user['id'] ?>"><div class="e_fol pos_ab" id="follow">フォロー解除</div></a>
             <?php }else{ // フォローしていない場合 ?>
-                <a href="./api/auth/follow.php?id=<?php echo $user['id'] ?>"><div class="fol pos_ab" id="follow">フォローする</div></a>
+                <a href="./api/auth/follow.php?id=<?php echo $user['id'] ?>"><div class="fol pos_ab" id="follow">フォロー</div></a>
             <?php } ?>
 
             <div class="bor"></div>

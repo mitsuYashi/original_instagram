@@ -4,11 +4,6 @@ require('./../../resource/db_connect.php');
 require('./../../resource/functions.php');
 session_start();
 
-$sql = 'DELETE FROM members WHERE id = ?';
-$stmt = $db->prepare($sql);
-$stmt->bindParam(1, $_SESSION['id']);
-$stmt->execute();
-
 $sql2 = 'DELETE FROM posts WHERE member_id = ?';
 $stmt2 = $db->prepare($sql2);
 $stmt2->bindParam(1, $_SESSION['id']);
@@ -24,6 +19,11 @@ $sql4 = 'DELETE FROM comment WHERE sent_member_id = ?';
 $stmt4 = $db->prepare($sql4);
 $stmt4->bindParam(1, $_SESSION['id']);
 $stmt4->execute();
+
+$sql = 'DELETE FROM members WHERE id = ?';
+$stmt = $db->prepare($sql);
+$stmt->bindParam(1, $_SESSION['id']);
+$stmt->execute();
 
 if (isset($_COOKIE['user_id'])) {
     
