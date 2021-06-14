@@ -7,6 +7,7 @@ instagramを模倣したアプリ。
 
 # フロントエンド
 HTML. Scss, Javascript
+npmが必要です。
 
 # バックエンド
 PHP
@@ -15,4 +16,4 @@ PHP
 Mysql
 
 # library
-npm
+axios
